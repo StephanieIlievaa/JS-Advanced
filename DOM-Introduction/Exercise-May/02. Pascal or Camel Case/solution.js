@@ -1,3 +1,4 @@
 function solve() {
-  //TODO...
+let input = document.getElementById('text').value;
+let currentCase = document.getElementById('naming-convention').value;
 }
