@@ -1,8 +1,13 @@
 function addItem() {
-   let text = document.getElementById('newItemText').value;
-   let li = document.createElement('li');
-   li.appendChild(document.createTextNode(text));
-   document.getElementById("items").appendChild(li);
-   // clear the input in the end
-   document.getElementById('newItemText').value = '';
+ //take the elements from the HTML
+ let text = document.getElementById('newTextItem');
+ let item = document.getElementById('items');
+
+ //create new li element 
+ let newLiElement = document.createElement('li');
+ newLiElement.textContent = text.value;
+
+ // append to DOM
+item.appendChild(newLiElement);
+text.value = '';
 }
