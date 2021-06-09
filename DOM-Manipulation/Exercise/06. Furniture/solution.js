@@ -92,3 +92,131 @@ function solve() {
         buyTextarea.textContent = `${furnitureText}\n${priceText}\n${decFactorText}`;
     }
 }
+
+
+// function solve() {
+ 
+//     //TODO...
+//     let generateBtn = document.getElementsByTagName('button')[0];
+//     generateBtn.addEventListener('click',onClickGenerate);
+   
+//     let buyBtn = document.getElementsByTagName('button')[1];
+//     buyBtn.addEventListener('click',onClickBuy);
+   
+//     function onClickGenerate(event) {
+//       let input = document.getElementsByTagName('textarea')[0].value;
+//       let arr = JSON.parse(input);
+//       let table = document.querySelector('.table tbody');
+   
+//       for (const obj of arr) {
+//         let newTr = document.createElement('tr');
+//         table.appendChild(newTr);
+   
+//         let img = document.createElement('td');
+//         img.innerHTML = '<img src ="' + obj.img + '"/>';
+//         newTr.appendChild(img);
+   
+//         let name = document.createElement('td');
+//         name.textContent = `${obj.name}`;
+//         newTr.appendChild(name);
+   
+//         let price = document.createElement('td');
+//         price.textContent = `${obj.price}`;
+//         newTr.appendChild(price);
+        
+//         let decFactor = document.createElement('td');
+//         decFactor.textContent = `${obj.decFactor}`;
+//         newTr.appendChild(decFactor);
+   
+//         let mark = document.createElement('td');
+//         mark.innerHTML = '<input type="checkbox" />';
+//         newTr.appendChild(mark);
+//       }
+//     }
+   
+//     function onClickBuy(event) {
+//       let checkboxes = Array.from(document.querySelectorAll('input[type="checkbox"]'));
+   
+//       let names = [];
+//       let totalPrice = 0;
+//       let avgDecFactor = 0;
+   
+//       for (const box of checkboxes) {
+//         let parent = box.parentNode.parentNode.getElementsByTagName('td');
+   
+//         if (box.checked === true) {
+//           let name = parent[1].textContent;
+//           let price = Number(parent[2].textContent);
+//           let decFactor = Number(parent[3].textContent);
+   
+//           names.push(name);
+//           totalPrice += price;
+//           avgDecFactor += decFactor;
+//         }
+//       }
+   
+//       let result = `Bought furniture: ${names.join(', ')}\n`;
+   
+//       result += `Total price: ${totalPrice.toFixed(2)}\n`;
+   
+//       avgDecFactor /= names.length;
+   
+//       result += `Average decoration factor: ${avgDecFactor}`;
+   
+//       let ouput = document.getElementsByTagName('textarea')[1];
+   
+//       ouput.textContent = result;
+   
+//     }
+//   }
+
+
+// function solve() {
+
+//     const [furnitureArea, buyArea] = Array.from(document.querySelectorAll('textarea'))
+//     const [generateBtn, buyBtn] = Array.from(document.querySelectorAll('button'))
+//     const tbody = document.querySelector('tbody')
+//     generateBtn.addEventListener('click', addFurniture)
+//     buyBtn.addEventListener('click', buyAll)
+  
+//     function addFurniture() {
+//       JSON.parse(furnitureArea.value).forEach(f => {
+//         let furnitureStructure = `
+//           <tr>
+//            <td><img src="${f.img}"></td>
+//            <td><p>${f.name}</p></td> 
+//            <td><p>${f.price}</p></td>
+//            <td><p>${f.decFactor}</p></td>
+//            <td><input type="checkbox"/></td>
+//           </tr>`
+  
+//         tbody.insertAdjacentHTML(`beforeend`, furnitureStructure)
+//       });
+//     }
+  
+//     function buyAll() {
+//       const furniture = Array.from(document.querySelectorAll('input[type=checkbox]:checked'))
+//         .map(input => input.parentNode.parentNode)
+  
+//       const result = {
+//         name: [],
+//         totalPrice: 0,
+//         decFactor: 0
+//       }
+  
+//       for (let row of furniture) {
+//         const cells = row.children
+  
+//         const name = cells[1].children[0].textContent
+//         result.name.push(name)
+  
+//         const price = Number(cells[2].children[0].textContent)
+//         result.totalPrice += price
+  
+//         const factor = Number(cells[3].children[0].textContent)
+//         result.decFactor += factor
+//       }
+  
+//       buyArea.value = `Bought furniture: ${result.name.join(', ')}\nTotal price: ${result.totalPrice.toFixed(2)}\nAverage decoration factor: ${result.decFactor / furniture.length}`
+//     }
+//   }
