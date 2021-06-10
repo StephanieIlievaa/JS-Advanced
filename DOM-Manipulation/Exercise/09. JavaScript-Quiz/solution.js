@@ -22,8 +22,7 @@ function solve() {
       document.querySelector("#results").style.display = "block";
       if (rightAnswers !== 3) {
         document.querySelector('#results h1').textContent = `You have ${rightAnswers} right answers`
-      } else {
-        document.querySelector('#results h1').textContent = 'You are recognized as top JavaScript fan!'
+         document.querySelector('#results h1').textContent = 'You are recognized as top JavaScript fan!'
       }
     }
   }
