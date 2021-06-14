@@ -19,7 +19,7 @@
 //     // .slice(start, end + 1)
 //     // .map(Number)
 //     // .reduce((a, c) => a + c, 0);
-
+ 
 function subSum(numbers, startIndex, endIndex) {
     if (Array.isArray(numbers) == false) {
         return NaN;
