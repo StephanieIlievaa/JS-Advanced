@@ -93,6 +93,11 @@ class Bank {
         }
     }
 
+
+
+
+
+
 let bank = new Bank('SoftUni Bank');
 
 console.log(bank.newCustomer({ firstName: 'Svetlin', lastName: 'Nakov', personalId: 6233267 }));
