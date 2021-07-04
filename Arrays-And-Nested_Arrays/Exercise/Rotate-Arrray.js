@@ -1,8 +1,10 @@
-function solve(arr, rotation) {
+function solve(array, rotation) {
+
     for (let i = 0; i < rotation; i++) {
-        const element = arr.pop()
-        arr.unshift();
+        let num = array.pop();
+        array.unshift(num);
     }
-    return arr.join(' ');
+
+    return array.join(' ');
 }
 solve(['1', '2', '3', '4'], 2);

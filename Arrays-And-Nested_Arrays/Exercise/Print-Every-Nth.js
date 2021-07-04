@@ -1,15 +1,10 @@
-const solve = (arr, step) => {
-    // predicate function
-    let result = arr.filter((el, i) => i % step === 0) ;
-      
-// let result = [];
-// for(let i = 0; i < arr.length; i++) {
-//     if (i % step === 0) {
-//         result.push(arr[i]);
-//     }
-// }
-return result;
-
+function solve(array, n) {
+    let newArr = []
+    for (let i = 0; i < array.length; i += n) {
+        const element = array[i];
+        newArr.push(element);
+    }
+    return newArr; 
 }
 console.log(solve(['5', '20', '31', '4', '20'], 2));
 
